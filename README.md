@@ -47,23 +47,35 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 ```
 /
 ├── README.md                          ← você está aqui
+├── .gitignore                         ← impede que prd-output/ suba ao GitHub
 ├── prd-guide.md                       ← guia rápido de uso (a preencher)
 ├── prd-rastreamento-pedidos-tempo-real.md  ← exemplo de PRD completo
+├── prd-output/                        ← pasta local para salvar PRDs gerados (não vai ao GitHub)
 │
 ├── .kiro/
-│   └── steering/                      ← regras e instruções do agente
-│       ├── prd-orchestrator.md        ← orquestrador: perguntas iniciais + análise de mercado
-│       ├── prd-template.md            ← template padrão das 18 seções do PRD
-│       ├── prd-validation-rules.md    ← regras de revisão e score de qualidade
-│       ├── product.md                 ← regras de discovery e definição de problema
-│       ├── spac-writing-rules.md      ← regras de escrita do PRD completo
-│       ├── market-competitors.md      ← regras de análise de concorrentes
-│       ├── personas-and-users.md      ← regras de mapeamento de personas (a preencher)
-│       ├── lgpd-and-compliance.md     ← regras de compliance e LGPD (a preencher)
-│       ├── business-rules-hcm.md      ← regras de negócio específicas (a preencher)
-│       ├── structure.md               ← regras de estrutura de arquivos (a preencher)
-│       ├── tech.md                    ← regras técnicas (a preencher)
-│       └── Guardrails.md             ← guardrails e restrições gerais (a preencher)
+│   ├── steering/                      ← regras e instruções do agente
+│   │   ├── prd-orchestrator.md        ← orquestrador: perguntas iniciais + análise de mercado
+│   │   ├── prd-template.md            ← template padrão das 18 seções do PRD
+│   │   ├── prd-validation-rules.md    ← regras de revisão e score de qualidade
+│   │   ├── product.md                 ← regras de discovery e definição de problema
+│   │   ├── spac-writing-rules.md      ← regras de escrita do PRD completo
+│   │   ├── market-competitors.md      ← regras de análise de concorrentes
+│   │   ├── Guardrails.md              ← 16 guardrails de qualidade e segurança
+│   │   ├── personas-and-users.md      ← regras de mapeamento de personas (a preencher)
+│   │   ├── lgpd-and-compliance.md     ← regras de compliance e LGPD (a preencher)
+│   │   ├── business-rules-hcm.md      ← regras de negócio específicas (a preencher)
+│   │   ├── structure.md               ← regras de estrutura de arquivos (a preencher)
+│   │   └── tech.md                    ← regras técnicas (a preencher)
+│   │
+│   └── skills/prd-writing/            ← skill de escrita de PRD
+│       ├── SKILL.md                   ← instruções e fluxo completo do skill
+│       └── references/                ← arquivos de referência usados pelo skill
+│           ├── prd-template.md
+│           ├── validation-checklist.md
+│           ├── personas-examples.md
+│           ├── functional-requirements.md
+│           ├── competitor-analysis.md
+│           └── compliance-lgpd.md
 │
 └── aidlc-docs/                        ← documentação interna do ciclo de vida do agente
     ├── aidlc-state.md                 ← estado atual do projeto
@@ -161,16 +173,20 @@ O agente entrega o PRD completo e já faz uma auto-revisão com score de qualida
 
 ### 6. Salve o arquivo
 
-Salve o PRD gerado como um arquivo `.md` na raiz do repositório, seguindo o padrão de nomenclatura:
+O agente vai perguntar onde você quer salvar o PRD antes de gerá-lo. As opções são:
 
-```
-prd-[nome-da-feature-em-kebab-case].md
-```
+- **Opção A — recomendada**: pasta `prd-output/` dentro deste workspace. Os arquivos salvos aqui ficam apenas no seu computador e **não são enviados ao GitHub**.
+- **Opção B**: informe um caminho personalizado, como `C:\Users\seu-nome\Desktop\`.
 
+Se não souber o que escolher, confirme a Opção A. O agente vai salvar automaticamente.
+
+O nome do arquivo segue o padrão:
+```
+prd-[nome-da-feature]-[data].md
+```
 Exemplos:
-- `prd-aprovacao-ferias-lote.md`
-- `prd-rastreamento-pedidos-tempo-real.md`
-- `prd-simulacao-rescisao.md`
+- `prd-aprovacao-ferias-lote-2026-04-09.md`
+- `prd-rastreamento-pedidos-tempo-real-2026-04-07.md`
 
 ---
 

@@ -33,6 +33,15 @@ Skill especializado para criação de PRDs (Product Requirements Documents) estr
    - Terá IA embarcada e/ou construção de tela?
    - É para mobile e/ou desktop?
 
+2. **Perguntar onde salvar o arquivo**:
+   Antes de gerar o PRD, perguntar ao usuário onde deseja salvar o arquivo. Apresentar as opções de forma simples:
+   - **Opção A (recomendada)**: Salvar na pasta `prd-output/` — fica salvo localmente e não é enviado ao GitHub
+   - **Opção B**: Informar um caminho personalizado (ex: `C:\Users\nome\Desktop\`)
+   - Se o usuário não souber ou não responder, usar a **Opção A** como padrão
+
+   O nome do arquivo deve seguir o padrão: `prd-[nome-produto]-[data].md`
+   Exemplo: `prd-rastreamento-pedidos-tempo-real-2026-04-07.md`
+
 2. **Analisar o briefing fornecido**:
    - Identificar problema principal
    - Mapear dores do usuário
@@ -164,11 +173,36 @@ Exemplo: `prd-rastreamento-pedidos-tempo-real-2026-04-07.md`
 
 8. **Cenários de teste desde o início**: Escrever testes enquanto define requisitos melhora a qualidade.
 
+## Steering Files ativos
+
+O agente carrega automaticamente todos os steering files em `.kiro/steering/`. Ao criar um novo steering file, ele passa a ser considerado automaticamente nas próximas interações. Os steering files ativos atualmente são:
+
+| Arquivo | Responsabilidade |
+|---------|-----------------|
+| `prd-orchestrator.md` | Perguntas iniciais + análise de mercado |
+| `prd-template.md` | Template padrão das 18 seções |
+| `prd-validation-rules.md` | Revisão e score de qualidade |
+| `product.md` | Discovery e definição de problema |
+| `spac-writing-rules.md` | Regras de escrita do PRD completo |
+| `market-competitors.md` | Análise de concorrentes |
+| `Guardrails.md` | 16 guardrails de qualidade e segurança |
+| `personas-and-users.md` | Mapeamento de personas *(a preencher)* |
+| `lgpd-and-compliance.md` | Compliance e LGPD *(a preencher)* |
+| `business-rules-hcm.md` | Regras de negócio dos produtos Senior *(a preencher)* |
+| `structure.md` | Estrutura de arquivos e pastas *(a preencher)* |
+| `tech.md` | Restrições técnicas *(a preencher)* |
+
+**Importante**: sempre que um novo steering file for criado em `.kiro/steering/`, ele deve ser adicionado a esta tabela.
+
 ## Referências
 
-- [Template PRD Padrão](references/prd-template.md)
-- [Checklist de Validação](references/validation-checklist.md)
-- [Exemplos de Personas](references/personas-examples.md)
-- [Análise de Concorrentes](references/competitor-analysis.md)
-- [Requisitos Funcionais - Padrão](references/functional-requirements.md)
-- [Compliance e LGPD](references/compliance-lgpd.md)
+As referências abaixo são lidas pelo agente durante a geração do PRD. Atenção à coluna "Onde editar" — alguns arquivos são apenas ponteiros para os steering files, que são a fonte oficial.
+
+| Referência | Arquivo | Onde editar |
+|-----------|---------|-------------|
+| Template PRD | `.kiro/skills/prd-writing/references/prd-template.md` | `.kiro/steering/prd-template.md` ← edite aqui |
+| Análise de Concorrentes | `.kiro/skills/prd-writing/references/competitor-analysis.md` | `.kiro/steering/market-competitors.md` ← edite aqui |
+| Compliance e LGPD | `.kiro/skills/prd-writing/references/compliance-lgpd.md` | `.kiro/steering/lgpd-and-compliance.md` ← edite aqui |
+| Checklist de Validação | `.kiro/skills/prd-writing/references/validation-checklist.md` | próprio arquivo |
+| Exemplos de Personas | `.kiro/skills/prd-writing/references/personas-examples.md` | próprio arquivo |
+| Requisitos Funcionais | `.kiro/skills/prd-writing/references/functional-requirements.md` | próprio arquivo |
