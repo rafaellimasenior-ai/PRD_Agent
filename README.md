@@ -23,7 +23,7 @@ O agente segue um fluxo em três etapas:
 ```
 
 **Etapa 1 — Perguntas iniciais**
-Antes de escrever qualquer coisa, o agente faz perguntas obrigatórias, exemplo:
+Antes de escrever qualquer coisa, o agente busca no briefing e nos materiais anexados as respostas para as perguntas obrigatórias. Só faz as perguntas cujas respostas não foram identificadas no prompt inicial. As perguntas são:
 - É inovação ou melhoria/evolução de produto?
 - Para qual linha de solução Senior será o PRD?
 - Para qual produto específico?
@@ -62,7 +62,8 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 │       ├── lgpd-and-compliance.md     ← regras de compliance e LGPD (a preencher)
 │       ├── business-rules-hcm.md      ← regras de negócio específicas (a preencher)
 │       ├── structure.md               ← regras de estrutura de arquivos (a preencher)
-│       └── tech.md                    ← regras técnicas (a preencher)
+│       ├── tech.md                    ← regras técnicas (a preencher)
+│       └── Guardrails.md             ← guardrails e restrições gerais (a preencher)
 │
 └── aidlc-docs/                        ← documentação interna do ciclo de vida do agente
     ├── aidlc-state.md                 ← estado atual do projeto
@@ -93,6 +94,7 @@ Cada arquivo tem uma responsabilidade específica:
 | `business-rules-hcm.md` | Regras de negócio específicas dos produtos Senior *(vazio — a preencher)* |
 | `structure.md` | Padrão de estrutura de arquivos e pastas *(vazio — a preencher)* |
 | `tech.md` | Restrições e padrões técnicos *(vazio — a preencher)* |
+| `Guardrails.md` | 16 guardrails obrigatórios: foco em problema antes de solução, anti-alucinação, LGPD, controle de escopo, rastreabilidade, consistência entre seções e qualidade mínima para aprovação |
 
 ### Como o Kiro usa os steering files
 
@@ -324,3 +326,4 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 |--------|------|-------|-----------|
 | v1.0 | 09/04/2026 | Kiro (gerado) | Criação do documento |
 | v1.1 | 09/04/2026 | Kiro (gerado) | Adicionada seção de manutenção automática |
+| v1.2 | 09/04/2026 | Kiro (gerado) | Guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
