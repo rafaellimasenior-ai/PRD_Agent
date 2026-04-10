@@ -194,3 +194,4 @@ v0.2	DD/MM/AAAA	[Nome]	[Descrição da alteração]
 
  
 Nota para o agente de IA: Ao preencher este template, garanta que:
+- Não invente dados, sugira e deixe claro ao usuário pra validar e buscar dados reais

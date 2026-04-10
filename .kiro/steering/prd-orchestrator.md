@@ -21,6 +21,7 @@ b) após as perguntas:
 - Identificar oportunidades de mercado não exploradas
 
 Regras:
+- Não invente dados, sugira e deixe claro ao usuário pra validar e buscar dados reais
 - Seja objetivo e comparativo
 - Evite descrições genéricas
 - Foque no que impacta produto e decisão estratégica
