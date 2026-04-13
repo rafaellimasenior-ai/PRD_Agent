@@ -29,7 +29,7 @@ PMAs e times de produto da Senior Sistemas responsáveis por comunicar novidades
 Autonomia operacional para o time de marketing de produto: campanhas publicadas em minutos, sem dependência de desenvolvimento, com rastreabilidade de engajamento em tempo real.
 
 **Resumo executivo:**
-Hoje, qualquer alteração de banner ou link comunicativo na plataforma Senior X exige intervenção direta no código-fonte do workspace — um gargalo que atrasa campanhas, aumenta o risco de erros e cria dependência crítica do time de engenharia para ações de marketing. Este módulo elimina esse gargalo ao entregar uma interface de gestão self-service para campanhas visuais, com controle de limites por tipo de produto (gratuito/upsell), monitoramento de engajamento e filtros avançados. O resultado é um ciclo de comunicação mais ágil, mensurável e seguro.
+Hoje, qualquer alteração de banner ou link comunicativo na home page dos produtos XT exige intervenção direta no código-fonte do workspace — um gargalo que atrasa campanhas, aumenta o risco de erros e cria dependência crítica do time de engenharia para ações de marketing. Este módulo elimina esse gargalo ao entregar uma interface de gestão self-service para campanhas visuais, com controle de limites por tipo de produto (gratuito/upsell), monitoramento de engajamento e filtros avançados. O resultado é um ciclo de comunicação mais ágil, mensurável e seguro.
 
 ---
 
@@ -37,11 +37,11 @@ Hoje, qualquer alteração de banner ou link comunicativo na plataforma Senior X
 
 ### 2.1 Estado Atual (As-Is)
 
-Atualmente, a inserção ou alteração de imagens e links de comunicação na plataforma Senior X é feita diretamente no código-fonte do workspace. O processo exige:
+Atualmente, a inserção ou alteração de imagens e links de comunicação na home page dos produtos XT é feita diretamente no código-fonte do workspace. O processo exige:
 
 1. PMA identifica necessidade de campanha e elabora o material visual.
-2. PMA abre chamado ou solicita ao time de engenharia a alteração no código.
-3. Engenheiro acessa o código-fonte, localiza o ponto de inserção e realiza a alteração.
+2. PMA abre chamado ou solicita ao time de desenvolvimento a alteração no código.
+3. Desenvolvedor acessa o código-fonte, localiza o ponto de inserção e realiza a alteração.
 4. Alteração passa por processo de revisão e deploy.
 5. Campanha vai ao ar — com atraso médio de dias a semanas.
 
@@ -51,11 +51,11 @@ Não há interface de monitoramento de cliques ou engajamento associada a essas 
 
 | Fonte da Evidência | Descrição |
 |---|---|
-| Processo atual mapeado | Dependência de engenharia para publicar qualquer campanha visual |
+| Processo atual mapeado | Dependência do time de desenvolvimento para publicar qualquer campanha visual |
 | Ausência de dados | Nenhum mecanismo de rastreamento de cliques nas campanhas atuais |
 | Velocidade de mercado | Campanhas que deveriam durar dias levam semanas para ir ao ar |
 | Risco operacional | Alterações manuais no código aumentam risco de regressão e indisponibilidade |
-| Dados internos | Necessário validar: volume de chamados de engenharia originados por solicitações de marketing |
+| Dados internos | Necessário validar: volume de chamados do time de desenvolvimento originados por solicitações de marketing |
 
 > ⚠️ **Lacuna:** Não foram fornecidos dados quantitativos (volume de chamados, tempo médio de publicação, NPS de PMAs). Recomenda-se levantar esses dados antes da aprovação final do PRD.
 
@@ -68,7 +68,7 @@ Não há interface de monitoramento de cliques ou engajamento associada a essas 
 | **Intercom Product Tours** | Ferramenta SaaS de comunicação in-product | Criação e gestão de banners, tooltips e modais diretamente na interface do produto, com segmentação e analytics de engajamento | Self-service completo para times de produto/marketing; analytics nativo de cliques e conversão; controle de exibição por segmento | Produto externo (não nativo); custo adicional de licença; integração necessária |
 | **Pendo** | Plataforma de adoção de produto | Gestão de guias, banners e comunicados in-app com rastreamento de engajamento e segmentação por perfil de usuário | Analytics avançado; segmentação granular; sem dependência de engenharia para publicar | Produto externo; complexidade de implementação; custo elevado |
 | **Appcues** | Ferramenta de onboarding e comunicação in-product | Editor visual de banners e flows sem código, com métricas de engajamento | Editor no-code; fácil adoção por PMAs; integração com ferramentas de analytics | Produto externo; sem controle nativo de limites por tipo de produto |
-| **Solução atual (código-fonte)** | Processo interno manual | Alteração direta no código-fonte do workspace para inserir/alterar banners | Nenhum custo de ferramenta adicional | Dependência total de engenharia; sem rastreamento; lento; alto risco operacional |
+| **Solução atual (código-fonte)** | Processo interno manual | Alteração direta no código-fonte do workspace para inserir/alterar banners | Nenhum custo de ferramenta adicional | Dependência total do time de desenvolvimento; sem rastreamento; lento; alto risco operacional |
 
 **Oportunidades de diferenciação em relação às ferramentas externas:**
 - Ferramentas como Intercom, Pendo e Appcues são produtos externos com custo de licença e integração. Uma solução **nativa na plataforma Senior X** elimina esse custo e garante integração perfeita com o modelo de autenticação, produtos e workspaces já existentes.
@@ -84,7 +84,7 @@ Não há interface de monitoramento de cliques ou engajamento associada a essas 
 
 | # | Objetivo | Métrica Alvo | Prazo |
 |---|---|---|---|
-| O1 | Eliminar dependência de engenharia para publicação de campanhas | 100% das campanhas publicadas via interface (0 chamados de engenharia para banners) | 3 meses após release |
+| O1 | Eliminar dependência do time de desenvolvimento para publicação de campanhas | 100% das campanhas publicadas via interface (0 chamados de desenvolvimento para banners) | 3 meses após release |
 | O2 | Reduzir tempo de publicação de campanhas | Tempo médio de publicação < 30 minutos (vs. dias/semanas atual) | 3 meses após release |
 | O3 | Gerar dados de engajamento para decisões de marketing | 100% das ações com rastreamento de cliques ativo | Desde o release |
 | O4 | Aumentar adoção do módulo pelos PMAs | Necessário validar: % da base de PMAs usando o módulo ativamente | 6 meses após release |
@@ -103,23 +103,23 @@ Não há interface de monitoramento de cliques ou engajamento associada a essas 
 | Custo de desenvolvimento | Necessário estimar com engenharia (backend, frontend, infraestrutura) |
 | Custo de infraestrutura | Blob storage para imagens, banco de dados de eventos de clique, fila de mensageria, cache |
 | Custo de manutenção | Job de expiração automática, monitoramento de fila, logs de auditoria |
-| ROI esperado | Eliminação de horas de engenharia gastas em alterações manuais de banner; redução de risco operacional; habilitação de campanhas de upsell mensuráveis |
+| ROI esperado | Eliminação de horas do time de desenvolvimento gastas em alterações manuais de banner; redução de risco operacional; habilitação de campanhas de upsell mensuráveis |
 | Decisão build vs. buy | Avaliar custo de desenvolvimento interno vs. licença de ferramenta externa (ex: Pendo ~$X/mês — necessário validar cotação) |
 
-> ⚠️ **Lacuna:** Necessário levantar estimativa de horas de engenharia atualmente gastas em alterações de banner para calcular o ROI real da solução interna vs. ferramenta externa.
+> ⚠️ **Lacuna:** Necessário levantar estimativa de horas do time de desenvolvimento atualmente gastas em alterações de banner para calcular o ROI real da solução interna vs. ferramenta externa.
 
 ---
 
 ## 5. Personas
 
-> **Contexto:** As personas são **internas à Senior Sistemas** (quem usa a ferramenta de gestão) e **usuários finais da plataforma Senior X** (quem vê as campanhas publicadas).
+> **Contexto:** As personas são **internas à Senior Sistemas** (quem usa a ferramenta de gestão) e **usuários finais dos produtos XT** (quem vê as campanhas publicadas na home page).
 
 | Persona | Perfil | Necessidade Principal | Valor Recebido |
 |---|---|---|---|
-| **PMA (Product Marketing Analyst)** | Colaborador interno da Senior, responsável por campanhas de comunicação nos produtos da plataforma | Publicar e gerenciar campanhas visuais sem abrir chamado para engenharia, com visibilidade de desempenho | Autonomia total: cria, edita, monitora e mede campanhas em minutos, sem dependência técnica |
+| **PMA (Product Marketing Analyst)** | Colaborador interno da Senior, responsável por campanhas de comunicação nos produtos da plataforma | Publicar e gerenciar campanhas visuais sem abrir chamado para o time de desenvolvimento, com visibilidade de desempenho | Autonomia total: cria, edita, monitora e mede campanhas em minutos, sem dependência técnica |
 | **Gestor de Produto (interno)** | Líder de produto da Senior que acompanha o desempenho das campanhas e toma decisões de roadmap | Visão consolidada do engajamento por produto para embasar decisões de comunicação e priorização | Dados de cliques e engajamento para justificar investimento em campanhas e medir efetividade |
-| **Usuário Final da Plataforma Senior X** | Colaborador ou gestor de uma empresa cliente que usa o Senior X no dia a dia | Receber comunicações relevantes sobre produtos, novidades e funcionalidades disponíveis na plataforma | Informações contextuais e oportunas sobre o que está disponível no produto que usa |
-| **Administrador da Plataforma (interno)** | Responsável técnico pelo ambiente Senior X | Garantir que apenas PMAs autorizados gerenciem campanhas; manter governança e rastreabilidade | Controle de acesso granular e log de auditoria para conformidade e segurança |
+| **Usuário Final do Produto XT** | Colaborador ou gestor de uma empresa cliente que usa os produtos XT no dia a dia | Receber comunicações relevantes sobre produtos, novidades e funcionalidades disponíveis na home page do produto | Informações contextuais e oportunas sobre o que está disponível no produto que usa |
+| **Administrador da Plataforma (interno)** | Responsável técnico pelo ambiente Senior X com permissão de administrador | Configurar e atribuir o papel "PMA - Gestão de Comunicação" aos usuários corretos via Tecnologia > Administração > Autorização > Gestão de Papéis | Controle de acesso granular por recurso e ação, com auditoria de permissões nativa da plataforma |
 
 ---
 
@@ -143,11 +143,13 @@ Funcionalidades:
 - Estado vazio orientativo
 
 ### Módulo 3 — Engajamento e Analytics
-Rastreamento e visualização de cliques nos links das ações de comunicação.
+Rastreamento e visualização de cliques nos links das ações de comunicação, com visão por cliente.
 
 Funcionalidades:
-- Registro de eventos de clique com timestamp
-- Visualização de total de cliques, série temporal e taxa de engajamento
+- Registro de eventos de clique com tenant, codcli, usuário e timestamp
+- Visualização de cliques por campanha com colunas: tenant, codcli, usuário, qtd cliques
+- Filtros por período, campanha e cliente (codcli)
+- Visão consolidada de todas as campanhas de um cliente ao filtrar por codcli
 - Exportação de dados em CSV
 - Fila de reprocessamento para resiliência
 
@@ -160,10 +162,12 @@ Funcionalidades:
 - Limpeza de filtros sem recarregamento de página
 
 ### Módulo 5 — Controle de Acesso e Auditoria
-Governança e segurança do módulo.
+Governança e segurança do módulo, baseada no mecanismo de papéis (RBAC) da plataforma Senior X.
 
 Funcionalidades:
-- Controle de acesso por perfil (PMA)
+- Controle de acesso via papéis configurados em Tecnologia > Administração > Autorização > Gestão de Papéis
+- Criação de papel específico (ex: "PMA - Gestão de Comunicação") com permissões sobre os recursos do módulo
+- Permissões granulares por recurso e ação (Criar, Editar, Desativar, Excluir, Visualizar, Exportar)
 - Log de auditoria de todas as operações de escrita
 - Validação de sessão ativa em operações sensíveis
 - Preservação de formulário em caso de expiração de sessão
@@ -175,35 +179,92 @@ Funcionalidades:
 
 ### Visão Geral
 
+O Frontend XT é uma aplicação Angular 18 que se comunica com dois sistemas: o Host (ERP/HCM legado) via Bridge JavaScript (CEF), e a Plataforma Senior X via REST. A home page dos produtos XT já existe e é renderizada pelo Frontend XT — o módulo de Gestão de Comunicação precisa expor uma API REST que o Frontend XT consuma para exibir os banners de campanha ativos.
+
 ```mermaid
 graph TD
-    PMA[PMA - Usuário Interno] -->|Acessa| UI[Interface Web - Senior X]
-    UI -->|CRUD de Ações| API_CAMP[API de Campanhas]
-    UI -->|Consulta Painel| API_MON[API de Monitoramento]
-    UI -->|Consulta Engajamento| API_ENG[API de Engajamento]
-    
+    PMA[PMA - Usuário Interno] -->|Acessa módulo de gestão| UI_SENIORX[Interface Senior X - Gestão de Comunicação]
+    UI_SENIORX -->|CRUD de Ações| API_CAMP[API de Campanhas]
+    UI_SENIORX -->|Consulta Painel| API_MON[API de Monitoramento]
+    UI_SENIORX -->|Consulta Engajamento| API_ENG[API de Engajamento]
+
     API_CAMP -->|Persiste| DB_CAMP[(BD Campanhas)]
     API_CAMP -->|Upload| STORAGE[Blob Storage - Imagens]
-    
     API_MON -->|Lê| DB_CAMP
     API_MON -->|Lê| DB_ENG[(BD Engajamento)]
-    
-    USUARIO_FINAL[Usuário Final Senior X] -->|Visualiza banner| UI_PROD[Produto Senior X]
-    UI_PROD -->|Evento de clique| API_ENG
+
+    FRONTEND_XT[Frontend XT - Angular 18] -->|GET /campanhas/ativas?produto_id=X| API_CAMP
+    FRONTEND_XT -->|Renderiza banner na home page do produto XT| HOME_XT[Home Page Produto XT]
+    HOME_XT -->|Usuário clica no banner| FRONTEND_XT
+    FRONTEND_XT -->|POST /engajamento/clique| API_ENG
+
     API_ENG -->|Persiste| DB_ENG
     API_ENG -->|Falha| FILA[Fila de Reprocessamento]
     FILA -->|Reprocessa| API_ENG
-    
+
     API_CAMP -->|Log| AUDIT[(Log de Auditoria)]
     API_ENG -->|Log| AUDIT
 ```
+
+### O que precisa ser criado para conectar ao Frontend XT
+
+O Frontend XT já possui a estrutura de home page e comunicação REST com a Plataforma Senior X. Para exibir as campanhas dos PMAs, são necessários os seguintes contratos e implementações:
+
+**1. Endpoint público de campanhas ativas (consumido pelo Frontend XT)**
+
+O Frontend XT precisa de um endpoint REST que retorne as campanhas ativas para um produto específico, sem exigir autenticação de PMA — apenas o token de sessão do usuário final:
+
+```
+GET /campanhas/ativas?produto_id={produto_id}
+Authorization: Bearer {token_senior_x}
+
+Response:
+[
+  {
+    "id": "uuid",
+    "imagem_url": "https://cdn.../banner.png",
+    "link_url": "https://...",
+    "tipo": "GRATUITO | UPSELL",
+    "tag": "Novidade | Promoção | ...",
+    "data_fim": "2026-12-31"
+  }
+]
+```
+
+Se não houver campanhas ativas, retorna array vazio `[]` — o Frontend XT exibe o empty state "Aguarde novidades".
+
+**2. Componente Angular no Frontend XT (home page)**
+
+O time do Frontend XT precisa implementar um componente na home page que:
+- Chame `GET /campanhas/ativas?produto_id={produto_id}` na inicialização
+- Renderize os banners retornados (imagem + link clicável)
+- Exiba empty state "Aguarde novidades" quando o array for vazio
+- Ao clicar no banner, dispare `POST /engajamento/clique` com tenant, codcli, usuario e campanha_id antes de abrir o link
+
+**3. Integração com o modo de execução do Frontend XT**
+
+O Frontend XT opera em 4 modos (Standalone, Restrito, SeniorX, Offline). O comportamento esperado por modo:
+
+| Modo | Comportamento dos Banners |
+|---|---|
+| SeniorX | Busca campanhas ativas via REST normalmente |
+| Restrito | Não exibe banners (sem conexão com Senior X) |
+| Standalone | Usa dados mockados para desenvolvimento/testes |
+| Offline | Não exibe banners (sem conexão com Senior X) |
+
+**4. Rastreamento de cliques via PlatformService**
+
+O Frontend XT já possui um `PlatformService` para comunicação REST com a Senior X. O registro de clique deve ser feito através desse serviço, garantindo que o token de sessão seja enviado corretamente e que tenant/codcli sejam extraídos do contexto da sessão ativa.
 
 ### Decisões de Arquitetura
 
 | Decisão | Escolha | Justificativa |
 |---|---|---|
-| Armazenamento de imagens | Blob Storage (ex: S3-compatible) | Desacopla imagens do banco relacional, permite CDN |
+| Armazenamento de imagens | Blob Storage (ex: S3-compatible) + CDN | Desacopla imagens do banco relacional; CDN já usada pelo Frontend XT (AWS CloudFront) |
 | Eventos de clique | Fila assíncrona + worker | Garante resiliência sem impactar latência do usuário final |
+| Atualização do painel | Cache com TTL de 1 hora | Balanceia frescor dos dados com performance |
+| Controle de limites | Validação server-side | Evita race conditions em cadastros simultâneos |
+| Endpoint de campanhas ativas | REST público (autenticado por token de sessão) | Compatível com o padrão de comunicação REST já usado pelo Frontend XT via PlatformService |
 | Atualização do painel | Cache com TTL de 1 hora | Balanceia frescor dos dados com performance |
 | Controle de limites | Validação server-side | Evita race conditions em cadastros simultâneos |
 
@@ -234,8 +295,9 @@ graph TD
 
 | Endpoint | Método | Descrição |
 |---|---|---|
-| `/engajamento/clique` | POST | Registra evento de clique |
-| `/engajamento/{campanha_id}` | GET | Retorna métricas de engajamento da ação |
+| `/engajamento/clique` | POST | Registra evento de clique (tenant, codcli, usuario, campanha_id, timestamp) |
+| `/engajamento/{campanha_id}` | GET | Retorna tabela de engajamento da ação: tenant, codcli, usuário, qtd cliques — com filtros por período e cliente |
+| `/engajamento/cliente/{codcli}` | GET | Retorna todas as interações de um cliente em todas as campanhas — com filtro por período |
 | `/engajamento/{campanha_id}/exportar` | GET | Exporta dados em CSV |
 
 ---
@@ -273,6 +335,9 @@ EventoClique {
   id:           UUID
   campanha_id:  UUID
   produto_id:   UUID
+  tenant:       String  (identificador do tenant)
+  codcli:       String  (código do cliente)
+  usuario:      String  (identificador do usuário que clicou)
   timestamp:    Timestamp
   processado:   Boolean
 }
@@ -343,14 +408,17 @@ sequenceDiagram
 1. PMA acessa o Painel de Monitoramento.
 2. Visualiza visão consolidada por produto.
 3. Seleciona produto específico para drill-down.
-4. Acessa dados de cliques de uma ação específica.
-5. Exporta CSV para análise externa.
+4. Acessa dados de cliques de uma ação específica — tabela exibe: tenant, codcli, usuário, qtd cliques.
+5. Aplica filtros por período, campanha ou cliente (codcli).
+6. Ao filtrar por cliente, visualiza todas as interações daquele cliente em todas as campanhas.
+7. Exporta CSV para análise externa.
 
 **Fluxo C — Expiração automática:**
 1. Data de fim de uma ação é atingida.
 2. Sistema altera status para "Expirada" automaticamente (job agendado).
 3. PMA visualiza ação com status "Expirada" na listagem.
-4. PMA atualiza data de fim para reativar a ação.
+4. Se não houver nenhuma ação ativa cadastrada para o produto, a home page do produto XT exibe empty state com a mensagem "Aguarde novidades".
+5. PMA atualiza data de fim para reativar a ação.
 
 ---
 
@@ -387,7 +455,7 @@ sequenceDiagram
 | Descrição | O sistema deve alterar automaticamente o status de ações para EXPIRADA quando a data_fim for atingida |
 | Regras de Negócio | Job agendado (ex: diário) verifica ações com data_fim < hoje e status ATIVA/INATIVA |
 | Dados de Entrada | Nenhum (processo automático) |
-| Dados de Saída | Ações com status atualizado para EXPIRADA |
+| Dados de Saída | Ações com status atualizado para EXPIRADA; home page do produto XT exibe empty state "Aguarde novidades" quando não há nenhuma ação ativa |
 | Comportamento de Erro | Falha no job: alertar time de operações; não impacta usuário final |
 | Dependências | RF01 |
 | Prioridade | Must |
@@ -408,10 +476,10 @@ sequenceDiagram
 
 | Campo | Descrição |
 |---|---|
-| Descrição | O sistema deve registrar cliques nos links das ações e exibir métricas de engajamento |
-| Regras de Negócio | Registro assíncrono via fila; retenção mínima de 12 meses; exportação em CSV |
-| Dados de Entrada | campanha_id, timestamp (automático) |
-| Dados de Saída | Total de cliques, série temporal por dia, taxa de engajamento, CSV exportável |
+| Descrição | O sistema deve registrar cliques nos links das ações e exibir métricas de engajamento por campanha, com visão detalhada por cliente |
+| Regras de Negócio | Registro assíncrono via fila; retenção mínima de 12 meses; exportação em CSV; ao filtrar por cliente (codcli), exibir interações daquele cliente em todas as campanhas |
+| Dados de Entrada | campanha_id, tenant, codcli, usuario, timestamp (automático) |
+| Dados de Saída | Tabela com colunas: tenant, codcli, usuário, qtd cliques — filtrável por período, campanha e cliente |
 | Comportamento de Erro | Falha no registro: evento vai para fila de reprocessamento sem perda |
 | Dependências | RF01 |
 | Prioridade | Must |
@@ -428,16 +496,17 @@ sequenceDiagram
 | Dependências | RF01 |
 | Prioridade | Must |
 
-### RF07 — Controle de Acesso e Auditoria
+### RF07 — Controle de Acesso via Papéis da Senior X
 
 | Campo | Descrição |
 |---|---|
-| Descrição | O sistema deve restringir acesso ao módulo ao perfil PMA e registrar log de auditoria de todas as operações de escrita |
-| Regras de Negócio | Acesso negado para perfis não-PMA; log inclui user_id, operação, entidade, dados antes/depois, timestamp, IP |
-| Dados de Entrada | Sessão do usuário |
-| Dados de Saída | Acesso liberado ou bloqueado; log persistido |
-| Comportamento de Erro | Sessão expirada: preservar formulário, redirecionar para login, restaurar após autenticação |
-| Dependências | Autenticação Senior X |
+| Descrição | O sistema deve restringir acesso ao módulo com base nos papéis configurados na plataforma Senior X (RBAC), e registrar log de auditoria de todas as operações de escrita |
+| Regras de Negócio | Acesso controlado via mecanismo nativo de Gestão de Papéis da Senior X (Tecnologia > Administração > Autorização > Gestão de Papéis); deve ser criado um papel específico para o módulo (ex: "PMA - Gestão de Comunicação") com permissões por recurso e ação (Criar, Editar, Desativar, Excluir, Visualizar, Exportar); usuários sem o papel atribuído recebem acesso negado; log inclui user_id, operação, entidade, dados antes/depois, timestamp, IP |
+| Dados de Entrada | Token de sessão Senior X com papéis do usuário |
+| Dados de Saída | Acesso liberado ou bloqueado conforme papéis; log persistido |
+| Comportamento de Erro | Sessão expirada: preservar formulário, redirecionar para login, restaurar após autenticação; acesso negado: mensagem de permissão insuficiente sem detalhes técnicos |
+| Dependências | Plataforma Senior X — Gestão de Papéis (RBAC) |
+| Prioridade | Must |
 | Prioridade | Must |
 
 
@@ -636,20 +705,32 @@ sequenceDiagram
 
 | Dependência | Tipo | Descrição |
 |---|---|---|
-| Autenticação Senior X | Serviço | Validação de sessão e perfil de usuário (PMA) |
+| Autenticação Senior X (RBAC) | Serviço | Validação de sessão e papéis do usuário via Gestão de Papéis da Senior X |
 | Cadastro de Produtos Senior X | Dados | Lista de produtos disponíveis para associação de campanhas |
-| Infraestrutura de Blob Storage | Infraestrutura | Armazenamento de imagens das ações |
+| Infraestrutura de Blob Storage | Infraestrutura | Armazenamento de imagens das ações (compatível com CDN AWS CloudFront já usada pelo Frontend XT) |
 | Sistema de Filas (mensageria) | Infraestrutura | Processamento assíncrono de eventos de clique |
 | Banco de Dados relacional Senior X | Infraestrutura | Persistência de campanhas, eventos e logs |
 
-### 18.2 Integrações Externas
+### 18.2 Integração com o Frontend XT
+
+| Componente | Tipo | O que precisa ser feito |
+|---|---|---|
+| Endpoint `GET /campanhas/ativas` | API REST | Criar endpoint que retorna campanhas ativas por produto_id — consumido pelo Frontend XT via `PlatformService` |
+| Endpoint `POST /engajamento/clique` | API REST | Criar endpoint que registra clique com tenant, codcli, usuario, campanha_id — chamado pelo Frontend XT ao clicar no banner |
+| Componente de banner na home page | Frontend XT (Angular 18) | Time do Frontend XT implementa componente que consome a API, renderiza banners e exibe empty state "Aguarde novidades" |
+| Suporte a modo Standalone | Frontend XT (Angular 18) | Time do Frontend XT implementa mock dos endpoints para desenvolvimento/testes locais |
+| Extração de tenant/codcli/usuario | Frontend XT (Angular 18) | Extrair do contexto de sessão ativa e enviar no payload do clique |
+
+> ⚠️ **Dependência crítica:** A implementação do componente de banner na home page é responsabilidade do time do Frontend XT. O time de Gestão de Comunicação entrega os endpoints REST; o time do Frontend XT integra na home page. Necessário alinhar cronograma entre os dois times.
+
+### 18.3 Integrações Externas
 
 | Sistema / API | Tipo | Descrição |
 |---|---|---|
-| CDN (opcional) | Performance | Distribuição de imagens para reduzir latência de carregamento dos banners |
+| CDN AWS CloudFront | Performance | Distribuição de imagens — já utilizada pelo Frontend XT, reutilizar a mesma infraestrutura |
 | Sistema de alertas/monitoramento | Operacional | Alertas em caso de falha no job de expiração ou na fila de reprocessamento |
 
-> ⚠️ **Lacuna:** Necessário validar com time de infraestrutura quais serviços de blob storage, fila e CDN estão disponíveis no ambiente Senior X.
+> ⚠️ **Lacuna:** Necessário validar com time de infraestrutura quais serviços de blob storage e fila estão disponíveis no ambiente Senior X, e confirmar uso do CloudFront existente para as imagens de campanha.
 
 ---
 
@@ -705,14 +786,14 @@ sequenceDiagram
 
 | Métrica | Baseline (Atual) | Meta | Prazo de Medição |
 |---|---|---|---|
-| Chamados de engenharia para alteração de banners | Necessário validar | 0 chamados/mês | 3 meses após release |
+| Chamados do time de desenvolvimento para alteração de banners | Necessário validar | 0 chamados/mês | 3 meses após release |
 | Tempo médio de publicação de campanha | Necessário validar (estimado: dias) | < 30 minutos | 3 meses após release |
 | Adoção do módulo pelos PMAs | 0% (produto novo) | Necessário validar com time | 6 meses após release |
 | Ações com rastreamento de cliques ativo | 0% (sem rastreamento atual) | 100% das ações criadas | Desde o release |
 | Incidentes de regressão por alteração de banner | Necessário validar | 0 incidentes | 3 meses após release |
 | Taxa de retenção de dados de engajamento | N/A | 100% (sem perda de eventos) | Contínuo |
 
-> ⚠️ **Lacuna:** Baselines precisam ser levantados com time de CS e engenharia antes da aprovação final.
+> ⚠️ **Lacuna:** Baselines precisam ser levantados com time de CS e desenvolvimento antes da aprovação final.
 
 ---
 
