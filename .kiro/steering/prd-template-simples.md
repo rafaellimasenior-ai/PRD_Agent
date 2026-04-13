@@ -1,12 +1,12 @@
 Template PRD — Modelo Simples
-Quando usar: nova funcionalidade ou ação em tela existente.
+Quando usar: Nova feature, Melhoria/Evolução ou Correção.
 Propósito: Modelo padronizado de PRD que unifica visão de negócio, detalhamento funcional (para quebra de tarefas) e base para documentação e prototipação. Projetado para ser consumido por agentes de IA na geração automatizada de PRDs.
  
 Metadados do Documento
 Campo	Valor
 Produto / Módulo	[Nome do produto ou módulo]
 Funcionalidade	[Nome da feature]
-Tipo	[Nova funcionalidade / Melhoria / Correção]
+Tipo	[Novo produto / Novo módulo / Nova jornada / Nova feature / Melhoria / Correção]
 Status	[Em Definição / Em Desenvolvimento / Em Homologação / Entregue]
 Product Owner	[Nome]
 Stakeholders	[Lista de envolvidos]

@@ -49,7 +49,9 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 ├── README.md                          ← você está aqui
 ├── .gitignore                         ← impede que prd-output/ suba ao GitHub
 ├── prd-guide.md                       ← guia rápido de uso (a preencher)
-├── prd-rastreamento-pedidos-tempo-real.md  ← exemplo de PRD completo
+├── prd-rastreamento-pedidos-tempo-real.md  ← exemplo de PRD completo (Logística)
+├── prd-assinatura-termo-vistoria-pvd.md   ← exemplo de PRD completo (Hypnobox PVD)
+├── prd-notificacao-resposta-portal-pvd.md ← exemplo de PRD (Hypnobox PVD — Nova feature)
 ├── prd-output/                        ← pasta local para salvar PRDs gerados (não vai ao GitHub)
 │
 ├── .kiro/
@@ -276,7 +278,13 @@ Deve conter restrições técnicas relevantes para o PRD. Sugestão de conteúdo
 
 ## Exemplo de PRD gerado
 
-O arquivo `prd-rastreamento-pedidos-tempo-real.md` é um exemplo real de PRD gerado por este agente para o módulo Roteirizador (Logística). Use-o como referência para entender o nível de detalhe esperado em cada seção.
+Dois exemplos reais de PRDs gerados por este agente estão disponíveis no repositório:
+
+- `prd-rastreamento-pedidos-tempo-real.md` — PRD para o módulo Roteirizador (Logística)
+- `prd-assinatura-termo-vistoria-pvd.md` — PRD para Assinatura Digital de Termo de Vistoria (Hypnobox PVD)
+- `prd-notificacao-resposta-portal-pvd.md` — PRD para Notificação de Resposta do Cliente no Portal (Hypnobox PVD — Nova feature)
+
+Use-os como referência para entender o nível de detalhe esperado em cada seção.
 
 ---
 
@@ -345,4 +353,7 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 | v1.0 | 09/04/2026 | Kiro (gerado) | Criação do documento |
 | v1.1 | 09/04/2026 | Kiro (gerado) | Adicionada seção de manutenção automática |
 | v1.2 | 09/04/2026 | Kiro (gerado) | Guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
-| v1.4 | 13/04/2026 | Kiro (gerado) | `prd-template.md` separado em dois arquivos distintos: `prd-template-completo.md` e `prd-template-simples.md` — atualizada estrutura do repositório e tabela de steering files |
+| v1.5 | 13/04/2026 | Kiro (gerado) | Adicionada a skill hypnobox-product-knowledge ao repositório |
+| v1.6 | 13/04/2026 | Kiro (gerado) | Ajustada a lógica de decisão do agente para definição do tipo de PRD |
+| v1.7 | 13/04/2026 | Kiro (gerado) | Adicionado prd-assinatura-termo-vistoria-pvd.md na estrutura do repositório e na seção de exemplos |
+| v1.8 | 13/04/2026 | Kiro (gerado) | Adicionado prd-notificacao-resposta-portal-pvd.md na estrutura do repositório e na seção de exemplos |
