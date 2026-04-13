@@ -143,11 +143,12 @@ Funcionalidades:
 - Estado vazio orientativo
 
 ### Módulo 3 — Engajamento e Analytics
-Rastreamento e visualização de cliques nos links das ações de comunicação, com visão por cliente.
+Rastreamento e visualização de cliques nos links das ações de comunicação, com visão por cliente e indicador de picos de acesso por horário.
 
 Funcionalidades:
 - Registro de eventos de clique com tenant, codcli, usuário e timestamp
 - Visualização de cliques por campanha com colunas: tenant, codcli, usuário, qtd cliques
+- Gráfico de picos de acesso por horário do dia (00h–23h) com destaque visual nos horários de maior volume
 - Filtros por período, campanha e cliente (codcli)
 - Visão consolidada de todas as campanhas de um cliente ao filtrar por codcli
 - Exportação de dados em CSV
@@ -224,7 +225,7 @@ Response:
     "id": "uuid",
     "imagem_url": "https://cdn.../banner.png",
     "link_url": "https://...",
-    "tipo": "GRATUITO | UPSELL",
+    "tipo": "GRATUITO | VENDAS",
     "tag": "Novidade | Promoção | ...",
     "data_fim": "2026-12-31"
   }
@@ -315,8 +316,8 @@ AcaoComunicacao {
   link_url:      String (URL de destino)
   data_inicio:   Date
   data_fim:      Date
-  tag:           String (enum: Novidade | Promoção | Treinamento | Upsell | Outro)
-  tipo:          Enum (GRATUITO | UPSELL)
+  tag:           String (enum: Novidade | Promoção | Treinamento | Upsell | Crossell | Outro)
+  tipo:          Enum (GRATUITO | VENDAS)
   status:        Enum (ATIVA | INATIVA | EXPIRADA)
   criado_por:    UUID (user_id do PMA)
   criado_em:     Timestamp
@@ -326,7 +327,7 @@ AcaoComunicacao {
 
 **Invariante:** `data_inicio <= data_fim`
 **Invariante:** Para tipo GRATUITO, máximo 5 registros com status ATIVA por produto_id.
-**Invariante:** Para tipo UPSELL, máximo 1 registro com status ATIVA por produto_id.
+**Invariante:** Para tipo VENDAS, máximo 1 registro com status ATIVA por produto_id.
 
 ### Evento de Clique
 
@@ -429,7 +430,7 @@ sequenceDiagram
 | Campo | Descrição |
 |---|---|
 | Descrição | O sistema deve permitir que PMAs cadastrem ações de comunicação com imagem, link, período, tag e tipo |
-| Regras de Negócio | Máx. 5 ações ATIVAS por produto para tipo GRATUITO; máx. 1 ação ATIVA para tipo UPSELL; data_fim >= data_inicio; imagem: PNG/JPG/GIF, máx. 2 MB |
+| Regras de Negócio | Máx. 5 ações ATIVAS por produto para tipo GRATUITO; máx. 1 ação ATIVA para tipo VENDAS; data_fim >= data_inicio; imagem: PNG/JPG/GIF, máx. 2 MB |
 | Dados de Entrada | produto_id, imagem (arquivo), link_url, data_inicio, data_fim, tag, tipo |
 | Dados de Saída | Ação criada com id, status ATIVA (se data_inicio <= hoje) ou INATIVA (se data_inicio > hoje) |
 | Comportamento de Erro | Limite atingido: mensagem específica por tipo; campos inválidos: highlight + mensagem; upload falho: erro descritivo com retry |
@@ -479,7 +480,7 @@ sequenceDiagram
 | Descrição | O sistema deve registrar cliques nos links das ações e exibir métricas de engajamento por campanha, com visão detalhada por cliente |
 | Regras de Negócio | Registro assíncrono via fila; retenção mínima de 12 meses; exportação em CSV; ao filtrar por cliente (codcli), exibir interações daquele cliente em todas as campanhas |
 | Dados de Entrada | campanha_id, tenant, codcli, usuario, timestamp (automático) |
-| Dados de Saída | Tabela com colunas: tenant, codcli, usuário, qtd cliques — filtrável por período, campanha e cliente |
+| Dados de Saída | Tabela com colunas: tenant, codcli, qtd cliques — com drilldown por cliente exibindo usuários e qtd cliques individuais; filtrável por período, campanha e cliente; gráfico de picos de cliques por horário do dia (00h–23h) com destaque no horário de maior volume |
 | Comportamento de Erro | Falha no registro: evento vai para fila de reprocessamento sem perda |
 | Dependências | RF01 |
 | Prioridade | Must |
@@ -578,7 +579,7 @@ sequenceDiagram
 **Valida: Requisitos 1.2**
 
 ### Propriedade 2: Limite de ações ativas por tipo é invariante
-*Para qualquer* produto, o número de ações com status ATIVA do tipo GRATUITO nunca deve exceder 5, e o número de ações com status ATIVA do tipo UPSELL nunca deve exceder 1 — independentemente de quantas operações de criação, edição ou reativação sejam realizadas.
+*Para qualquer* produto, o número de ações com status ATIVA do tipo GRATUITO nunca deve exceder 5, e o número de ações com status ATIVA do tipo VENDAS nunca deve exceder 1 — independentemente de quantas operações de criação, edição ou reativação sejam realizadas.
 **Valida: Requisitos 1.3, 1.4, 2.3**
 
 ### Propriedade 3: Validação rejeita entradas inválidas

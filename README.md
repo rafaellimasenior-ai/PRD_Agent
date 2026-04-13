@@ -55,7 +55,8 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 ├── .kiro/
 │   ├── steering/                      ← regras e instruções do agente
 │   │   ├── prd-orchestrator.md        ← orquestrador: perguntas iniciais + análise de mercado
-│   │   ├── prd-template.md            ← template padrão das 18 seções do PRD
+│   │   ├── prd-template-completo.md   ← template PRD Modelo Completo (nova feature/módulo/produto)
+│   │   ├── prd-template-simples.md    ← template PRD Modelo Simples (funcionalidade em tela existente)
 │   │   ├── prd-validation-rules.md    ← regras de revisão e score de qualidade
 │   │   ├── product.md                 ← regras de discovery e definição de problema
 │   │   ├── spac-writing-rules.md      ← regras de escrita do PRD completo
@@ -96,7 +97,8 @@ Cada arquivo tem uma responsabilidade específica:
 | Arquivo | Responsabilidade |
 |---------|-----------------|
 | `prd-orchestrator.md` | Define as perguntas que o agente faz antes de começar + como fazer análise de mercado |
-| `prd-template.md` | Dois templates de PRD: **Modelo Completo** (para novas features, módulos ou produtos) e **Modelo Simples** (para funcionalidades em telas existentes) |
+| `prd-template-completo.md` | Template de PRD **Modelo Completo** — para novas features, módulos ou produtos |
+| `prd-template-simples.md` | Template de PRD **Modelo Simples** — para funcionalidades em telas existentes |
 | `prd-validation-rules.md` | Como o agente revisa e pontua a qualidade do PRD gerado |
 | `product.md` | Como o agente interpreta briefings e define o problema central |
 | `spac-writing-rules.md` | As 18 seções obrigatórias do PRD e o que cada uma deve conter |
@@ -343,4 +345,4 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 | v1.0 | 09/04/2026 | Kiro (gerado) | Criação do documento |
 | v1.1 | 09/04/2026 | Kiro (gerado) | Adicionada seção de manutenção automática |
 | v1.2 | 09/04/2026 | Kiro (gerado) | Guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
-| v1.3 | 13/04/2026 | Kiro (gerado) | prd-template.md atualizado com dois modelos distintos (Completo e Simples) — atualizada descrição na tabela de steering files |
+| v1.4 | 13/04/2026 | Kiro (gerado) | `prd-template.md` separado em dois arquivos distintos: `prd-template-completo.md` e `prd-template-simples.md` — atualizada estrutura do repositório e tabela de steering files |
