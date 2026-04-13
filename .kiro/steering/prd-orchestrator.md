@@ -12,6 +12,7 @@ Perguntas iniciais:
 
 b) após as perguntas:
 - Analisar o contexto da solução fornecida
+- Identificar tipo de entrega e direcionar para um dos modelos de PRD. Quando for uma entrega de nova feature, modulo ou produto usar o modelo Completo, quando for ação ou funcionalidade em tela existente usar o modelo Simples.
 - Identificar concorrentes diretos e indiretos (mínimo 3)
 - Avaliar:
   - Funcionalidades principais
