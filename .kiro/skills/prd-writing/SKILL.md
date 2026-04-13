@@ -180,7 +180,7 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 | Arquivo | Responsabilidade |
 |---------|-----------------|
 | `prd-orchestrator.md` | Perguntas iniciais + análise de mercado |
-| `prd-template.md` | Template padrão das 18 seções |
+| `prd-template.md` | Dois templates: Modelo Completo (nova feature/módulo/produto) e Modelo Simples (nova funcionalidade em tela existente) |
 | `prd-validation-rules.md` | Revisão e score de qualidade |
 | `product.md` | Discovery e definição de problema |
 | `spac-writing-rules.md` | Regras de escrita do PRD completo |
