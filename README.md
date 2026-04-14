@@ -60,9 +60,10 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 │   │   ├── product.md                 ← regras de discovery e definição de problema
 │   │   ├── spac-writing-rules.md      ← regras de escrita do PRD completo
 │   │   ├── market-competitors.md      ← regras de análise de concorrentes
+│   │   ├── product-tree.md            ← árvore de produto: linhas, verticais, produtos e POs
 │   │   ├── Guardrails.md              ← 16 guardrails de qualidade e segurança
+│   │   ├── lgpd-and-compliance.md     ← regras de compliance e LGPD
 │   │   ├── personas-and-users.md      ← regras de mapeamento de personas (a preencher)
-│   │   ├── lgpd-and-compliance.md     ← regras de compliance e LGPD (a preencher)
 │   │   ├── business-rules-hcm.md      ← regras de negócio específicas (a preencher)
 │   │   ├── structure.md               ← regras de estrutura de arquivos (a preencher)
 │   │   └── tech.md                    ← regras técnicas (a preencher)
@@ -101,12 +102,13 @@ Cada arquivo tem uma responsabilidade específica:
 | `product.md` | Como o agente interpreta briefings e define o problema central |
 | `spac-writing-rules.md` | As 18 seções obrigatórias do PRD e o que cada uma deve conter |
 | `market-competitors.md` | Como identificar e comparar concorrentes (Totvs, LG, Sankhya, Benner...) |
+| `product-tree.md` | Árvore de produto completa: linhas, verticais, produtos e PO designado por produto |
+| `Guardrails.md` | 16 guardrails obrigatórios: foco em problema antes de solução, anti-alucinação, LGPD, controle de escopo, rastreabilidade, consistência entre seções e qualidade mínima para aprovação |
 | `personas-and-users.md` | Regras para mapear personas e usuários *(vazio — a preencher)* |
-| `lgpd-and-compliance.md` | Regras de LGPD e compliance *(vazio — a preencher)* |
+| `lgpd-and-compliance.md` | Regras de LGPD e compliance |
 | `business-rules-hcm.md` | Regras de negócio específicas dos produtos Senior *(vazio — a preencher)* |
 | `structure.md` | Padrão de estrutura de arquivos e pastas *(vazio — a preencher)* |
 | `tech.md` | Restrições e padrões técnicos *(vazio — a preencher)* |
-| `Guardrails.md` | 16 guardrails obrigatórios: foco em problema antes de solução, anti-alucinação, LGPD, controle de escopo, rastreabilidade, consistência entre seções e qualidade mínima para aprovação |
 
 ### Como o Kiro usa os steering files
 
@@ -343,3 +345,4 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 | v1.0 | 09/04/2026 | Kiro (gerado) | Criação do documento |
 | v1.1 | 09/04/2026 | Kiro (gerado) | Adicionada seção de manutenção automática |
 | v1.2 | 09/04/2026 | Kiro (gerado) | Guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
+| v1.3 | 14/04/2026 | Kiro (gerado) | product-tree.md criado — árvore de produto com linhas, verticais, produtos e POs |

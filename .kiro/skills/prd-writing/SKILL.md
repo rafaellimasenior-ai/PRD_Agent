@@ -185,9 +185,10 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 | `product.md` | Discovery e definição de problema |
 | `spac-writing-rules.md` | Regras de escrita do PRD completo |
 | `market-competitors.md` | Análise de concorrentes |
+| `product-tree.md` | Árvore de produto: linhas, verticais, produtos e POs designados |
 | `Guardrails.md` | 16 guardrails de qualidade e segurança |
 | `personas-and-users.md` | Mapeamento de personas *(a preencher)* |
-| `lgpd-and-compliance.md` | Compliance e LGPD *(a preencher)* |
+| `lgpd-and-compliance.md` | Compliance e LGPD |
 | `business-rules-hcm.md` | Regras de negócio dos produtos Senior *(a preencher)* |
 | `structure.md` | Estrutura de arquivos e pastas *(a preencher)* |
 | `tech.md` | Restrições técnicas *(a preencher)* |

@@ -4,11 +4,13 @@ Use este checklist para validar a qualidade e completude do seu PRD antes de sub
 
 ## Metadados e Governança
 
-- [ ] Produto/Módulo identificado claramente
+- [ ] Linha de produto identificada (ERP / HCM / Logística / Gestão de Risco e Acesso / Senior Flow / Wiipo / Senior Capital / Adquiridas)
+- [ ] Vertical identificada, quando aplicável (ex: HCM → Talent Operation; ERP → Agronegócio)
+- [ ] Produto identificado conforme árvore de produto em `.kiro/steering/product-tree.md`
+- [ ] Product Owner designado conforme `.kiro/steering/product-tree.md` — consulte o arquivo para confirmar o PO correto do produto
 - [ ] Funcionalidade nomeada de forma descritiva
 - [ ] Tipo definido (Nova / Melhoria / Correção)
 - [ ] Status atualizado
-- [ ] Product Owner designado
 - [ ] Stakeholders listados
 - [ ] Data de criação preenchida
 - [ ] Versão iniciada (v0.1)
