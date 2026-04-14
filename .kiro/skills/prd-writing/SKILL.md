@@ -190,7 +190,7 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 | `personas-and-users.md` | Mapeamento de personas *(a preencher)* |
 | `lgpd-and-compliance.md` | Compliance e LGPD *(a preencher)* |
 | `business-rules-hcm.md` | Regras de negócio dos produtos Senior *(a preencher)* |
-| `structure.md` | Estrutura de arquivos e pastas *(a preencher)* |
+| `structure.md` | Define onde salvar arquivos gerados — todos os `.md` devem ir para `/output-files/`, nunca na raiz |
 | `tech.md` | Restrições técnicas *(a preencher)* |
 
 **Importante**: sempre que um novo steering file for criado em `.kiro/steering/`, ele deve ser adicionado a esta tabela.
