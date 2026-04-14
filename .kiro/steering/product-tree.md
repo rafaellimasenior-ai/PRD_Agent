@@ -32,7 +32,7 @@ Mantenha este arquivo atualizado sempre que houver mudança de PO ou estrutura d
 | Produto | PO Designado |
 |---------|-------------|
 | ATS de Recrutamento | Talita Camargo |
-| Admissão Digital | [Nome do PO] |
+| Admissão Digital | Alessa Ribeiro |
 
 ### Vertical: Talent Operation
 

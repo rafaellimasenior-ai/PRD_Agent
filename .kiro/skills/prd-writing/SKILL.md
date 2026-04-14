@@ -180,7 +180,8 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 | Arquivo | Responsabilidade |
 |---------|-----------------|
 | `prd-orchestrator.md` | Perguntas iniciais + análise de mercado |
-| `prd-template.md` | Template padrão das 18 seções |
+| `prd-template-completo.md` | Template Modelo Completo — usado para nova feature, módulo ou produto completo (18+ seções) |
+| `prd-template-simples.md` | Template Modelo Simples — usado para nova funcionalidade ou ação em tela existente (11 seções) |
 | `prd-validation-rules.md` | Revisão e score de qualidade |
 | `product.md` | Discovery e definição de problema |
 | `spac-writing-rules.md` | Regras de escrita do PRD completo |
@@ -190,7 +191,7 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 | `personas-and-users.md` | Mapeamento de personas *(a preencher)* |
 | `lgpd-and-compliance.md` | Compliance e LGPD |
 | `business-rules-hcm.md` | Regras de negócio dos produtos Senior *(a preencher)* |
-| `structure.md` | Estrutura de arquivos e pastas *(a preencher)* |
+| `structure.md` | Define onde salvar arquivos gerados — todos os `.md` devem ir para `/output-files/`, nunca na raiz |
 | `tech.md` | Restrições técnicas *(a preencher)* |
 
 **Importante**: sempre que um novo steering file for criado em `.kiro/steering/`, ele deve ser adicionado a esta tabela.
@@ -201,7 +202,8 @@ As referências abaixo são lidas pelo agente durante a geração do PRD. Atenç
 
 | Referência | Arquivo | Onde editar |
 |-----------|---------|-------------|
-| Template PRD | `.kiro/skills/prd-writing/references/prd-template.md` | `.kiro/steering/prd-template.md` ← edite aqui |
+| Template PRD Completo | `.kiro/skills/prd-writing/references/prd-template.md` | `.kiro/steering/prd-template-completo.md` ← edite aqui |
+| Template PRD Simples | `.kiro/skills/prd-writing/references/prd-template.md` | `.kiro/steering/prd-template-simples.md` ← edite aqui |
 | Análise de Concorrentes | `.kiro/skills/prd-writing/references/competitor-analysis.md` | `.kiro/steering/market-competitors.md` ← edite aqui |
 | Compliance e LGPD | `.kiro/skills/prd-writing/references/compliance-lgpd.md` | `.kiro/steering/lgpd-and-compliance.md` ← edite aqui |
 | Checklist de Validação | `.kiro/skills/prd-writing/references/validation-checklist.md` | próprio arquivo |

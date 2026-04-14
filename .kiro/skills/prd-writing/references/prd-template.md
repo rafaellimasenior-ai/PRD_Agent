@@ -1,6 +1,12 @@
 # Template PRD — Referência
 
-> A fonte oficial deste template é o steering file `.kiro/steering/prd-template.md`.
-> Edite sempre lá. Este arquivo existe apenas para fins de navegação.
+> A fonte oficial dos templates está nos steering files abaixo.
+> Edite sempre lá. Este arquivo existe apenas como ponteiro de navegação.
 
-#[[file:.kiro/steering/prd-template.md]]
+## Modelo Completo (nova feature, módulo ou produto)
+
+#[[file:.kiro/steering/prd-template-completo.md]]
+
+## Modelo Simples (nova funcionalidade ou ação em tela existente)
+
+#[[file:.kiro/steering/prd-template-simples.md]]

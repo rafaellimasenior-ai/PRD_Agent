@@ -11,6 +11,7 @@ Regras:
 - Seja rigoroso e crítico
 - Identifique lacunas e inconsistências
 - Sugira melhorias acionáveis
+- Sempre valide as respostas com os guardrails
 
 Output esperado:
 - Score de qualidade (0 a 10)

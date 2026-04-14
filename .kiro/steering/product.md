@@ -10,7 +10,7 @@ Sua responsabilidade é:
 - Refinar ou propor uma solução inicial coerente
 
 Regras:
-- Evite assumir sem evidência; sinalize incertezas
+- Não assuma sem evidência; sinalize incertezas
 - Estruture de forma clara e objetiva
 - Pense em valor de negócio e impacto no usuário
 - Diferencie problema de solução

@@ -49,13 +49,16 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 ├── README.md                          ← você está aqui
 ├── .gitignore                         ← impede que prd-output/ suba ao GitHub
 ├── prd-guide.md                       ← guia rápido de uso (a preencher)
-├── prd-rastreamento-pedidos-tempo-real.md  ← exemplo de PRD completo
+├── prd-rastreamento-pedidos-tempo-real.md  ← exemplo de PRD completo (Logística)
+├── prd-assinatura-termo-vistoria-pvd.md   ← exemplo de PRD completo (Hypnobox PVD)
+├── prd-notificacao-resposta-portal-pvd.md ← exemplo de PRD (Hypnobox PVD — Nova feature)
 ├── prd-output/                        ← pasta local para salvar PRDs gerados (não vai ao GitHub)
 │
 ├── .kiro/
 │   ├── steering/                      ← regras e instruções do agente
 │   │   ├── prd-orchestrator.md        ← orquestrador: perguntas iniciais + análise de mercado
-│   │   ├── prd-template.md            ← template padrão das 18 seções do PRD
+│   │   ├── prd-template-completo.md   ← template PRD Modelo Completo (nova feature/módulo/produto)
+│   │   ├── prd-template-simples.md    ← template PRD Modelo Simples (funcionalidade em tela existente)
 │   │   ├── prd-validation-rules.md    ← regras de revisão e score de qualidade
 │   │   ├── product.md                 ← regras de discovery e definição de problema
 │   │   ├── spac-writing-rules.md      ← regras de escrita do PRD completo
@@ -97,7 +100,8 @@ Cada arquivo tem uma responsabilidade específica:
 | Arquivo | Responsabilidade |
 |---------|-----------------|
 | `prd-orchestrator.md` | Define as perguntas que o agente faz antes de começar + como fazer análise de mercado |
-| `prd-template.md` | O template completo com todas as seções que todo PRD deve ter |
+| `prd-template-completo.md` | Template de PRD **Modelo Completo** — para novas features, módulos ou produtos |
+| `prd-template-simples.md` | Template de PRD **Modelo Simples** — para funcionalidades em telas existentes |
 | `prd-validation-rules.md` | Como o agente revisa e pontua a qualidade do PRD gerado |
 | `product.md` | Como o agente interpreta briefings e define o problema central |
 | `spac-writing-rules.md` | As 18 seções obrigatórias do PRD e o que cada uma deve conter |
@@ -276,7 +280,13 @@ Deve conter restrições técnicas relevantes para o PRD. Sugestão de conteúdo
 
 ## Exemplo de PRD gerado
 
-O arquivo `prd-rastreamento-pedidos-tempo-real.md` é um exemplo real de PRD gerado por este agente para o módulo Roteirizador (Logística). Use-o como referência para entender o nível de detalhe esperado em cada seção.
+Dois exemplos reais de PRDs gerados por este agente estão disponíveis no repositório:
+
+- `prd-rastreamento-pedidos-tempo-real.md` — PRD para o módulo Roteirizador (Logística)
+- `prd-assinatura-termo-vistoria-pvd.md` — PRD para Assinatura Digital de Termo de Vistoria (Hypnobox PVD)
+- `prd-notificacao-resposta-portal-pvd.md` — PRD para Notificação de Resposta do Cliente no Portal (Hypnobox PVD — Nova feature)
+
+Use-os como referência para entender o nível de detalhe esperado em cada seção.
 
 ---
 
@@ -345,4 +355,7 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 | v1.0 | 09/04/2026 | Kiro (gerado) | Criação do documento |
 | v1.1 | 09/04/2026 | Kiro (gerado) | Adicionada seção de manutenção automática |
 | v1.2 | 09/04/2026 | Kiro (gerado) | Guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
-| v1.3 | 14/04/2026 | Kiro (gerado) | product-tree.md criado — árvore de produto com linhas, verticais, produtos e POs |
+| v1.3 | 13/04/2026 | Kiro (gerado) | Adicionada a skill hypnobox-product-knowledge ao repositório |
+| v1.4 | 13/04/2026 | Kiro (gerado) | Ajustada a lógica de decisão do agente para definição do tipo de PRD |
+| v1.5 | 13/04/2026 | Kiro (gerado) | Adicionado prd-assinatura-termo-vistoria-pvd.md e prd-notificacao-resposta-portal-pvd.md |
+| v1.6 | 14/04/2026 | Kiro (gerado) | product-tree.md criado — árvore de produto com linhas, verticais, produtos e POs |
