@@ -38,7 +38,7 @@ Com as respostas em mãos, o agente:
 - Identifica oportunidades de mercado não exploradas
 
 **Etapa 3 — Geração do PRD**
-O agente escreve o PRD completo seguindo o template padrão com 18 seções (detalhadas abaixo), revisa criticamente o próprio documento e entrega um score de qualidade.
+O agente escreve o PRD completo usando o template oficial do tipo de entrega e o contrato definido pelos steering files, revisa criticamente o próprio documento e entrega um score de qualidade.
 
 ---
 
@@ -47,29 +47,29 @@ O agente escreve o PRD completo seguindo o template padrão com 18 seções (det
 ```
 /
 ├── README.md                          ← você está aqui
-├── .gitignore                         ← impede que prd-output/ suba ao GitHub
-├── prd-guide.md                       ← guia rápido de uso (a preencher)
+├── .gitignore                         ← impede que output-files/ suba ao GitHub
+├── prd-guide.md                       ← guia rápido de uso
 ├── prd-rastreamento-pedidos-tempo-real.md  ← exemplo de PRD completo (Logística)
 ├── prd-assinatura-termo-vistoria-pvd.md   ← exemplo de PRD completo (Hypnobox PVD)
 ├── prd-notificacao-resposta-portal-pvd.md ← exemplo de PRD (Hypnobox PVD — Nova feature)
-├── prd-output/                        ← pasta local para salvar PRDs gerados (não vai ao GitHub)
+├── output-files/                      ← pasta local para salvar PRDs gerados (não vai ao GitHub)
 │
 ├── .kiro/
 │   ├── steering/                      ← regras e instruções do agente
-│   │   ├── prd-orchestrator.md        ← orquestrador: perguntas iniciais + análise de mercado
-│   │   ├── prd-template-completo.md   ← template PRD Modelo Completo (nova feature/módulo/produto)
-│   │   ├── prd-template-simples.md    ← template PRD Modelo Simples (funcionalidade em tela existente)
+│   │   ├── prd-orchestrator.md        ← contrato normativo do orquestrador de PRD (classificação, profundidade e referências)
+│   │   ├── prd-domain-hypnobox.md     ← regras específicas de domínio quando o produto for Hypnobox
 │   │   ├── prd-validation-rules.md    ← regras de revisão e score de qualidade
+│   │   ├── prd-general-guidelines.md   ← diretrizes gerais de execução e convenções globais
 │   │   ├── product.md                 ← regras de discovery e definição de problema
-│   │   ├── spac-writing-rules.md      ← regras de escrita do PRD completo
+│   │   ├── prd-writing-rules.md       ← regras de escrita do PRD completo
 │   │   ├── market-competitors.md      ← regras de análise de concorrentes
 │   │   ├── product-tree.md            ← árvore de produto: linhas, verticais, produtos e POs
-│   │   ├── Guardrails.md              ← 16 guardrails de qualidade e segurança
+│   │   ├── prd-guardrails.md          ← 16 guardrails de qualidade e segurança para PRD
 │   │   ├── lgpd-and-compliance.md     ← regras de compliance e LGPD
-│   │   ├── personas-and-users.md      ← regras de mapeamento de personas (a preencher)
-│   │   ├── business-rules-hcm.md      ← regras de negócio específicas (a preencher)
-│   │   ├── structure.md               ← regras de estrutura de arquivos (a preencher)
-│   │   └── tech.md                    ← regras técnicas (a preencher)
+│   │   └── structure.md               ← estrutura de camadas, contratos e output
+│   │
+│   ├── templates/prd/                 ← template oficial de saída do PRD
+│   │   └── prd-template.md            ← template oficial único do PRD
 │   │
 │   └── skills/prd-writing/            ← skill de escrita de PRD
 │       ├── SKILL.md                   ← instruções e fluxo completo do skill
@@ -99,20 +99,29 @@ Cada arquivo tem uma responsabilidade específica:
 
 | Arquivo | Responsabilidade |
 |---------|-----------------|
-| `prd-orchestrator.md` | Define as perguntas que o agente faz antes de começar + como fazer análise de mercado |
-| `prd-template-completo.md` | Template de PRD **Modelo Completo** — para novas features, módulos ou produtos |
-| `prd-template-simples.md` | Template de PRD **Modelo Simples** — para funcionalidades em telas existentes |
+| `prd-orchestrator.md` | Define contrato normativo de orquestração: entradas mínimas, regra de profundidade e referências obrigatórias |
+| `prd-domain-hypnobox.md` | Define regras de domínio para PRDs Hypnobox sem acoplar o orquestrador genérico |
 | `prd-validation-rules.md` | Como o agente revisa e pontua a qualidade do PRD gerado |
+| `prd-general-guidelines.md` | Diretrizes gerais de execução, idioma e convenções globais |
 | `product.md` | Como o agente interpreta briefings e define o problema central |
-| `spac-writing-rules.md` | As 18 seções obrigatórias do PRD e o que cada uma deve conter |
+| `prd-writing-rules.md` | As 18 seções obrigatórias do PRD e o que cada uma deve conter |
 | `market-competitors.md` | Como identificar e comparar concorrentes (Totvs, LG, Sankhya, Benner...) |
 | `product-tree.md` | Árvore de produto completa: linhas, verticais, produtos e PO designado por produto |
-| `Guardrails.md` | 16 guardrails obrigatórios: foco em problema antes de solução, anti-alucinação, LGPD, controle de escopo, rastreabilidade, consistência entre seções e qualidade mínima para aprovação |
-| `personas-and-users.md` | Regras para mapear personas e usuários *(vazio — a preencher)* |
+| `prd-guardrails.md` | 16 guardrails obrigatórios de PRD: foco em problema antes de solução, anti-alucinação, LGPD, controle de escopo, rastreabilidade, consistência entre seções e qualidade mínima para aprovação |
 | `lgpd-and-compliance.md` | Regras de LGPD e compliance |
-| `business-rules-hcm.md` | Regras de negócio específicas dos produtos Senior *(vazio — a preencher)* |
-| `structure.md` | Padrão de estrutura de arquivos e pastas *(vazio — a preencher)* |
-| `tech.md` | Restrições e padrões técnicos *(vazio — a preencher)* |
+| `structure.md` | Padrão de estrutura por camadas, contrato de seções e convenções de output |
+
+### Separação de responsabilidades
+
+- `steering/` e a fonte oficial de regras, contratos, nomenclaturas e criterios.
+- `templates/` contem apenas a estrutura oficial de saida do PRD.
+- `skills/` executam o workflow e nao devem duplicar governanca.
+- `references/` sao materiais auxiliares, checklists e exemplos.
+
+### Template oficial
+
+- `.kiro/templates/prd/prd-template.md` e o template oficial unico do PRD.
+- A diferenca entre novo produto/modulo/jornada e feature/melhoria/correcao fica na profundidade de preenchimento definida pelo steering.
 
 ### Como o Kiro usa os steering files
 
@@ -167,7 +176,7 @@ no módulo de Gestão de Pessoas da Senior.
 
 ### 3. Responda as perguntas iniciais
 
-O agente vai fazer as perguntas antes de começar a escrever, de acordo com o arquivo `prd-orchestrator.md`. Responda com clareza — essas respostas definem o tom e o escopo de todo o PRD.
+O agente vai fazer as perguntas antes de começar a escrever, executando a skill de PRD e respeitando o contrato do `prd-orchestrator.md`. Responda com clareza — essas respostas definem o tom e o escopo de todo o PRD.
 
 ### 4. Aguarde a análise de concorrentes
 
@@ -181,7 +190,7 @@ O agente entrega o PRD completo e já faz uma auto-revisão com score de qualida
 
 O agente vai perguntar onde você quer salvar o PRD antes de gerá-lo. As opções são:
 
-- **Opção A — recomendada**: pasta `prd-output/` dentro deste workspace. Os arquivos salvos aqui ficam apenas no seu computador e **não são enviados ao GitHub**.
+- **Opção A — recomendada**: pasta `output-files/` dentro deste workspace. Os arquivos salvos aqui ficam apenas no seu computador e **não são enviados ao GitHub**.
 - **Opção B**: informe um caminho personalizado, como `C:\Users\seu-nome\Desktop\`.
 
 Se não souber o que escolher, confirme a Opção A. O agente vai salvar automaticamente.
@@ -236,45 +245,22 @@ Abra o arquivo em `.kiro/steering/`, edite diretamente e salve. As mudanças ent
 
 ---
 
-## Steering files vazios (a preencher)
+## Estrutura compartilhada para escala
 
-Os arquivos abaixo existem mas ainda estão vazios. São oportunidades de evolução do agente:
+Foi criada uma base compartilhada em `.shared/_assets/` para organizar ativos reutilizáveis por pacote:
+- `steering/` para governança e contratos comuns.
+- `templates/` para padronização de saída.
+- `scripts/` para utilitários comuns.
+- `knowledge-packs/` para organização de conhecimento por domínio e versão.
 
-### `personas-and-users.md`
-Deve conter regras para o agente mapear personas com profundidade. Sugestão de conteúdo:
-- Como identificar o perfil técnico vs. perfil de negócio
-- Quais perguntas fazer para entender a jornada do usuário
-- Como diferenciar usuário primário de secundário
-- Padrão de descrição de persona (nome fictício, cargo, dores, ganhos)
+### Organização de knowledge packs (planejado)
 
-### `lgpd-and-compliance.md`
-Deve conter as regras de compliance específicas da Senior. Sugestão de conteúdo:
-- Quais dados são considerados sensíveis nos produtos Senior
-- Checklist de LGPD para cada tipo de funcionalidade
-- Quando acionar o DPO (Data Protection Officer)
-- Regras de retenção e exclusão de dados
-- Obrigações com eSocial, SPED, e outros sistemas regulatórios
+Os domínios serão organizados por demanda, sem conteúdo inicial neste ciclo:
+- `knowledge-packs/folha-de-pagamento/v1/`
+- `knowledge-packs/reforma-tributaria/v1/`
+- `knowledge-packs/esocial/v1/`
 
-### `business-rules-hcm.md`
-Deve conter regras de negócio dos produtos Senior. Sugestão de conteúdo:
-- Regras trabalhistas (CLT, eSocial, FGTS, INSS, IRRF)
-- Regras específicas de cada módulo (Folha, Ponto, Benefícios, Recrutamento...)
-- Tabelas e limites legais vigentes
-- Integrações obrigatórias entre módulos
-
-### `structure.md`
-Deve definir o padrão de organização de arquivos. Sugestão de conteúdo:
-- Convenção de nomenclatura de arquivos de PRD
-- Onde salvar PRDs por linha de produto
-- Como versionar documentos
-- Estrutura de pastas para projetos grandes
-
-### `tech.md`
-Deve conter restrições técnicas relevantes para o PRD. Sugestão de conteúdo:
-- Stack tecnológica dos produtos Senior (para o agente não sugerir algo incompatível)
-- Padrões de API (REST, GraphQL, eventos)
-- Restrições de infraestrutura
-- Padrões de segurança e autenticação
+Cada pack deverá conter metadados de origem, data da última atualização e responsável funcional.
 
 ---
 
@@ -354,8 +340,9 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 |--------|------|-------|-----------|
 | v1.0 | 09/04/2026 | Kiro (gerado) | Criação do documento |
 | v1.1 | 09/04/2026 | Kiro (gerado) | Adicionada seção de manutenção automática |
-| v1.2 | 09/04/2026 | Kiro (gerado) | Guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
+| v1.2 | 09/04/2026 | Kiro (gerado) | guardrails.md preenchido — atualizada tabela de steering files e removido da lista de vazios |
 | v1.3 | 13/04/2026 | Kiro (gerado) | Adicionada a skill hypnobox-product-knowledge ao repositório |
 | v1.4 | 13/04/2026 | Kiro (gerado) | Ajustada a lógica de decisão do agente para definição do tipo de PRD |
 | v1.5 | 13/04/2026 | Kiro (gerado) | Adicionado prd-assinatura-termo-vistoria-pvd.md e prd-notificacao-resposta-portal-pvd.md |
 | v1.6 | 14/04/2026 | Kiro (gerado) | product-tree.md criado — árvore de produto com linhas, verticais, produtos e POs |
+| v1.7 | 14/04/2026 | Kiro (gerado) | Renomeado guardrails.md para prd-guardrails.md para explicitar especialização em PRD |

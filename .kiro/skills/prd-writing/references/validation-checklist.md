@@ -2,6 +2,9 @@
 
 Use este checklist para validar a qualidade e completude do seu PRD antes de submeter para stakeholders.
 
+> Este arquivo e auxiliar. A fonte oficial de contrato e severidade continua nos steering files do workspace.
+> Em caso de conflito, prevalecem `prd-writing-rules.md`, `prd-validation-rules.md` e `prd-guardrails.md`.
+
 ## Metadados e Governança
 
 - [ ] Linha de produto identificada (ERP / HCM / Logística / Gestão de Risco e Acesso / Senior Flow / Wiipo / Senior Capital / Adquiridas)
@@ -9,7 +12,7 @@ Use este checklist para validar a qualidade e completude do seu PRD antes de sub
 - [ ] Produto identificado conforme árvore de produto em `.kiro/steering/product-tree.md`
 - [ ] Product Owner designado conforme `.kiro/steering/product-tree.md` — consulte o arquivo para confirmar o PO correto do produto
 - [ ] Funcionalidade nomeada de forma descritiva
-- [ ] Tipo definido (Nova / Melhoria / Correção)
+- [ ] Tipo definido de forma consistente com o template selecionado
 - [ ] Status atualizado
 - [ ] Stakeholders listados
 - [ ] Data de criação preenchida
@@ -43,10 +46,10 @@ Use este checklist para validar a qualidade e completude do seu PRD antes de sub
 
 ## Pricing
 
-- [ ] Custos identificados
-- [ ] Modelos de precificação explorados
-- [ ] Impacto financeiro estimado
-- [ ] ROI calculado (se aplicável)
+- [ ] Custos identificados, quando aplicável
+- [ ] Modelos de precificação explorados, quando aplicável
+- [ ] Impacto financeiro estimado, quando aplicável
+- [ ] ROI calculado, se aplicável
 
 ## Personas
 
@@ -165,13 +168,12 @@ Use este checklist para validar a qualidade e completude do seu PRD antes de sub
 
 ## Plano de Execução
 
-- [ ] Mínimo 4 fases definidas
-- [ ] Cada fase com entregáveis claros
-- [ ] Duração estimada em sprints
-- [ ] Dependências entre fases mapeadas
-- [ ] Gates de qualidade definidos
-- [ ] Responsáveis por fase designados
-- [ ] Riscos de timeline considerados
+- [ ] Se aplicável, fases definidas com entregáveis claros
+- [ ] Se aplicável, duração estimada em sprints
+- [ ] Se aplicável, dependências entre fases mapeadas
+- [ ] Se aplicável, gates de qualidade definidos
+- [ ] Se aplicável, responsáveis por fase designados
+- [ ] Se aplicável, riscos de timeline considerados
 
 ## Glossário e Referências
 

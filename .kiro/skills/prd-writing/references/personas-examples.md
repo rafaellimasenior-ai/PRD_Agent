@@ -2,6 +2,9 @@
 
 Referência com exemplos de personas bem estruturadas para diferentes contextos.
 
+> Este arquivo e auxiliar. A fonte oficial do contrato do PRD continua nos steering files do workspace.
+> Em caso de conflito, prevalecem `prd-writing-rules.md`, `prd-validation-rules.md` e `prd-guardrails.md`.
+
 ## Exemplo 1: Sistema de RH (Rastreamento de Férias)
 
 ### Persona 1: Analista de RH
