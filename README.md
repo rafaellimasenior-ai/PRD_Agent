@@ -359,3 +359,4 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 | v1.4 | 13/04/2026 | Kiro (gerado) | Ajustada a lógica de decisão do agente para definição do tipo de PRD |
 | v1.5 | 13/04/2026 | Kiro (gerado) | Adicionado prd-assinatura-termo-vistoria-pvd.md e prd-notificacao-resposta-portal-pvd.md |
 | v1.6 | 14/04/2026 | Kiro (gerado) | product-tree.md criado — árvore de produto com linhas, verticais, produtos e POs |
+| v1.7 | 15/04/2026 | Kiro (gerado) | product-tree.md atualizado — POs da linha ERP detalhados (ERP XT, ERP X, ERP Mega, CRM, Marketing Intelligence, E-Docs) com nomes reais dos responsáveis |
