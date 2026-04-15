@@ -17,11 +17,26 @@ Mantenha este arquivo atualizado sempre que houver mudança de PO ou estrutura d
 
 | Produto | PO Designado |
 |---------|-------------|
-| Gestão Empresarial (Backoffice) | [Nome do PO] |
-| Compliance Fiscal | [Nome do PO] |
+| Gestão Empresarial ERP XT (Vendas) | [Leonardo Back] |
+| Gestão Empresarial ERP XT (Faturamento) | [Leonardo Back] |
+| Gestão Empresarial ERP XT (Suprimentos) | [Leonardo Back] |
+| Gestão Empresarial ERP XT (Financeiro) | [Igor Freitas] |
+| Gestão Empresarial ERP XT (Manufatura) | [Adriana Muzio] |
+| Gestão Empresarial ERP XT (Contábil e Fiscal) | [Cinthia Novasky] |
+| Compliance Fiscal | [Marlon Dognini] |
+| Gestão Empresarial ERP X (Mercado) | [Evandro Schmitt] |
+| Gestão Empresarial ERP X (Suprimentos) | [Marcelo Guerra Bires] |
+| Gestão Empresarial ERP X (Financeiro) | [Igor Freitas] |
+| Gestão Empresarial ERP X (Indústria) | [Adriana Muzio] |
+| Gestão Empresarial ERP X (Custos) | [Miguel Lima] |
+| Gestão Empresarial ERP X (Contábil/Fiscal) | [Patricia Paulo] |
+| Gestão Empresarial ERP Mega (Mercado) | [Igor Simoni] |
+| Gestão Empresarial ERP Mega (Financeiro) | [Valdeci Santos] |
+| Gestão Empresarial ERP Mega (Suprimentos) | [Henrique Castro] |
 | ERP Banking | Matheus Barreto |
-| Relacionamento e Vendas (CRM) | [Nome do PO] |
-| Marketing Intelligence | [Nome do PO] |
+| Relacionamento e Vendas (CRM) | [Alexandre Baehr] |
+| Marketing Intelligence | [Alexandre Baehr] |
+| E-Docs | [Sergio Vahldick] |
 
 ---
 
