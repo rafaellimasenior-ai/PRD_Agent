@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "senior-tasks-toolkit": {
+      "type": "http",
+      "url": "http://localhost:17361/mcp",
+      "headers": {
+        "X-Senior-Username": "preencher",
+        "X-Senior-Password": "preencher",
+        "X-WikiJS-Auth-Mode": "senior"
+      }
+    }
+  }
+}
