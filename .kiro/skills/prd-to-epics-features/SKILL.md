@@ -9,7 +9,7 @@ license: MIT
 compatibility: Requer MCP senior-tasks-toolkit ativo e acessível. Ideal após execução do skill prd-writing.
 metadata:
   category: product-management
-   version: 1.1.0
+  version: 1.1.0
   language: pt-BR
   use-cases: "backlog-inicial, epicos-jira, features-jira, prd-para-jira"
 allowed-tools: readFile readMultipleFiles fsWrite strReplace mcp_mcp-toolkit_tool_create_jira_issue mcp_mcp-toolkit_tool_search_jira_issues
