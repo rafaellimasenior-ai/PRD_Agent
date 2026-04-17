@@ -2,6 +2,9 @@
 
 Guia para estruturar requisitos funcionais de forma clara e executável.
 
+> Este arquivo e auxiliar. A fonte oficial do contrato do PRD continua nos steering files do workspace.
+> Em caso de conflito, prevalecem `prd-writing-rules.md`, `prd-validation-rules.md` e `prd-guardrails.md`.
+
 ## Estrutura Padrão de RF
 
 Cada requisito funcional deve seguir este padrão:
