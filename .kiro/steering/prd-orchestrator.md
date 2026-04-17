@@ -40,3 +40,21 @@ Output esperado:
 Regra adicional — Base Hypnobox:
 - Se o produto informado for “Hypnobox”, antes de gerar o PRD o agente deve carregar a base de conhecimento Hypnobox (`.kiro/skills/hypnobox-product-knowledge/SKILL.md`) e ler as referências relevantes em `references/` conforme o módulo/tema da feature.
 - Se o módulo não estiver claro, perguntar ao usuário qual módulo (CRM, TRS, PVD) e então ler o arquivo correspondente.
+
+Regra adicional — User Stories (jiratxt):
+- Se o usuário pedir para "quebrar em stories", "gerar backlog", "criar jiratxt", "preparar para o Jira" ou qualquer variação, ativar a skill `user-story-writer` (`.kiro/skills/user-story-writer/SKILL.md`) antes de gerar qualquer output.
+- A skill user-story-writer é genérica — funciona para qualquer produto, incluindo Hypnobox, produtos Senior e outros.
+
+Regra adicional — Análise de Impacto:
+- Se o usuário pedir "analisar impacto", "análise de impacto", "o que essa feature quebra", "quais módulos são afetados", "riscos de regressão" ou qualquer variação, ativar a skill `impact-analyzer` (`.kiro/skills/impact-analyzer/SKILL.md`).
+- ANTES de executar qualquer análise, verificar se existe skill de domínio disponível para o produto do PRD. Se não houver, bloquear e exibir a mensagem de bloqueio definida no SKILL.md do impact-analyzer.
+- O relatório gerado deve ser salvo em `output-files/impact-[nome-feature]-[data].md`.
+
+Regra adicional — Alerta pós-PRD:
+- Ao finalizar a entrega de qualquer PRD, sempre exibir o seguinte bloco de alerta ao final da resposta:
+
+---
+> 💡 **Próximos passos disponíveis**
+> - **Análise de Impacto:** se este produto tiver uma skill de domínio instalada (ex: Hypnobox), é possível gerar um relatório de impacto mapeando personas afetadas, módulos relacionados e riscos de regressão. Basta pedir: *"analisar impacto deste PRD"*.
+> - **Quebrar em User Stories:** peça *"jiratxt"* ou *"quebrar em stories"* para gerar o backlog pronto para o Jira.
+---

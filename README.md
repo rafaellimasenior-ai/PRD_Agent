@@ -99,7 +99,7 @@ Cada arquivo tem uma responsabilidade específica:
 
 | Arquivo | Responsabilidade |
 |---------|-----------------|
-| `prd-orchestrator.md` | Define as perguntas que o agente faz antes de começar + como fazer análise de mercado |
+| `prd-orchestrator.md` | Define as perguntas que o agente faz antes de começar + análise de mercado + acionamento das skills de Análise de Impacto e User Stories + alerta de próximos passos exibido ao final de todo PRD |
 | `prd-template-completo.md` | Template de PRD **Modelo Completo** — para novas features, módulos ou produtos |
 | `prd-template-simples.md` | Template de PRD **Modelo Simples** — para funcionalidades em telas existentes |
 | `prd-validation-rules.md` | Como o agente revisa e pontua a qualidade do PRD gerado |
@@ -360,3 +360,4 @@ Mudanças pequenas ou cosméticas (ajustes de texto sem impacto estrutural) não
 | v1.5 | 13/04/2026 | Kiro (gerado) | Adicionado prd-assinatura-termo-vistoria-pvd.md e prd-notificacao-resposta-portal-pvd.md |
 | v1.6 | 14/04/2026 | Kiro (gerado) | product-tree.md criado — árvore de produto com linhas, verticais, produtos e POs |
 | v1.7 | 15/04/2026 | Kiro (gerado) | product-tree.md atualizado — POs da linha ERP detalhados (ERP XT, ERP X, ERP Mega, CRM, Marketing Intelligence, E-Docs) com nomes reais dos responsáveis |
+| v1.8 | 16/04/2026 | Kiro (gerado) | prd-orchestrator.md atualizado — adicionadas regras de Análise de Impacto (skill impact-analyzer) e alerta de próximos passos pós-PRD |

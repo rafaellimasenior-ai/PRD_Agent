@@ -7,9 +7,9 @@ description: >
   construtoras, incorporadoras, corretor de imoveis, espelho de vendas, plantao de vendas,
   proposta imobiliaria, assinatura digital de contrato, boleto de imovel, vistoria, assistencia
   tecnica, regua de cobranca, portal do cliente, integracao com ERP, Mega,
-  ou qualquer combinacao desses termos. Tambem use ao escrever tarefas (jiratxt), historias de
-  usuario, roadmap, analise de persona, analise competitiva ou qualquer documento de produto
-  relacionado ao mercado imobiliario.
+  ou qualquer combinacao desses termos. Use ao escrever roadmap, analise de persona, analise
+  competitiva ou qualquer documento de produto relacionado ao mercado imobiliario.
+  Para geração de user stories e tarefas Jira (jiratxt), ative a skill user-story-writer.
 ---
 
 # Hypnobox — Base de Conhecimento Completa de Produto
@@ -107,32 +107,8 @@ A plataforma possui mais de 13 anos de expertise no mercado imobiliario.
 
 ---
 
-## Comando jiratxt — Estrutura de Tarefa
+## Geração de User Stories (jiratxt)
 
-Ao receber o comando `jiratxt`, sempre usar esta estrutura:
-
-```
-TITULO: [verbo de acao + objeto + contexto]
-
-CONTEXTO:
-[Explicar o problema/oportunidade que motiva a tarefa, referenciando o modulo
-(CRM/TRS/PVD), a persona afetada e o impacto no negocio]
-
-ESCOPO:
-[O que deve ser feito — listar comportamentos esperados, nao solucoes tecnicas]
-[O que NAO faz parte do escopo desta tarefa]
-
-CRITERIOS DE ACEITE:
-- [ ] [Criterio verificavel e objetivo]
-- [ ] [Criterio verificavel e objetivo]
-...
-
-CRITERIOS DE PRONTO (DoR):
-- [ ] Mockup ou prototipo aprovado (se aplicavel)
-- [ ] Regras de negocio documentadas
-- [ ] Dependencias mapeadas (integracao com ERP, canais, etc.)
-- [ ] Casos de borda identificados
-
-LINKS UTEIS:
-- [documentacao, API, referencia tecnica relevante]
-```
+Para gerar user stories e tarefas Jira a partir de contexto Hypnobox,
+ative a skill **user-story-writer** — ela contém o template completo, regras de escrita,
+exemplos e suporte a Story / Task / Bug / Sub-task / Epic.

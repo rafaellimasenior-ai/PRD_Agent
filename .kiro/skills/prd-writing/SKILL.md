@@ -179,7 +179,7 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 
 | Arquivo | Responsabilidade |
 |---------|-----------------|
-| `prd-orchestrator.md` | Perguntas iniciais + análise de mercado |
+| `prd-orchestrator.md` | Perguntas iniciais + análise de mercado + ativação da skill `impact-analyzer` + alerta pós-PRD com próximos passos |
 | `prd-template-completo.md` | Template Modelo Completo — usado para nova feature, módulo ou produto completo (18+ seções) |
 | `prd-template-simples.md` | Template Modelo Simples — usado para nova funcionalidade ou ação em tela existente (11 seções) |
 | `prd-validation-rules.md` | Revisão e score de qualidade |
@@ -193,6 +193,15 @@ O agente carrega automaticamente todos os steering files em `.kiro/steering/`. A
 | `business-rules-hcm.md` | Regras de negócio dos produtos Senior *(a preencher)* |
 | `structure.md` | Define onde salvar arquivos gerados — todos os `.md` devem ir para `/output-files/`, nunca na raiz |
 | `tech.md` | Restrições técnicas *(a preencher)* |
+
+## Skills Relacionadas
+
+| Skill | Quando ativar |
+|-------|--------------|
+| `hypnobox-product-knowledge` | Produto for Hypnobox (CRM, TRS, PVD) |
+| `user-story-writer` | Usuário pedir jiratxt, stories, backlog ou quebra de RFs |
+| `impact-analyzer` | Usuário pedir análise de impacto, mapeamento de regressão ou módulos afetados |
+| `slidev-presentation` | Usuário pedir slides ou apresentação do PRD |
 
 **Importante**: sempre que um novo steering file for criado em `.kiro/steering/`, ele deve ser adicionado a esta tabela.
 
