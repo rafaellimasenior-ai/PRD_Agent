@@ -23,6 +23,7 @@ Mantenha este arquivo atualizado sempre que houver mudança de PO ou estrutura d
 | Gestão Empresarial ERP XT (Financeiro) | [Igor Freitas] |
 | Gestão Empresarial ERP XT (Manufatura) | [Adriana Muzio] |
 | Gestão Empresarial ERP XT (Contábil e Fiscal) | [Cinthia Novasky] |
+| Gestão Empresarial ERP XT (Reforma tributária) | [Daniele Cristina] |
 | Compliance Fiscal | [Marlon Dognini] |
 | Gestão Empresarial ERP X (Mercado) | [Evandro Schmitt] |
 | Gestão Empresarial ERP X (Suprimentos) | [Marcelo Guerra Bires] |
@@ -33,10 +34,27 @@ Mantenha este arquivo atualizado sempre que houver mudança de PO ou estrutura d
 | Gestão Empresarial ERP Mega (Mercado) | [Igor Simoni] |
 | Gestão Empresarial ERP Mega (Financeiro) | [Valdeci Santos] |
 | Gestão Empresarial ERP Mega (Suprimentos) | [Henrique Castro] |
-| ERP Banking | Matheus Barreto |
+| ERP Banking | Matheus Barreto, Leandro Loch |
 | Relacionamento e Vendas (CRM) | [Alexandre Baehr] |
 | Marketing Intelligence | [Alexandre Baehr] |
 | E-Docs | [Sergio Vahldick] |
+| APP Gestor Senior, Analytics ERP, Sara Agentes | [Bruna Hoffmann] |
+| Venda+ | [Igor Freitas] |
+| Reforma tributária ERP X | [Wellington Oechsler] |
+| Integração Logística | [Filipe Campos] |
+| Foundation X | [Gesse Filho] |
+| Cotei, Requisita | [Henrique Castro] |
+| Gestão Empresarial ERP Mega (Orçamento, planejamento de obras e contratos de empreiteiros) | [Jefferson Sela] |
+| Gestão Empresarial ERP Mega (Incorporação, Add-nos web do Mega) | [Macus Svinka] |
+| Gestão Empresarial ERP Mega, UAU (Dados) | [Luis Barbosa] |
+| Gestão Empresarial ERP UAU (Engenharia) | [Claudia Tavares] |
+| Gestão Empresarial ERP UAU (Comercial) | [Viviane Ferreira] |
+| Gestão Empresarial ERP UAU (Financeiro e controladoria) | [Caroline Mendes] |
+| Gestão Empresarial ERP UAU (Legislação e contábil) | [Lucas Torres Vieira] |
+| Gestão Empresarial ERP UAU (Folha) | [Djalma Gomes de Sousa] |
+| Gestão Empresarial ERP (Canteiro Digital) | [Bruno Buzzi] |
+| Gestão Empresarial ERP X (Carteira X) | [Valmir Silva] |
+| Gestão Empresarial ERP X (Engenharia X) | [Andre Mikos] |
 
 ---
 
